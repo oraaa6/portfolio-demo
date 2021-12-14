@@ -1,0 +1,443 @@
+// HEADER STYLING
+.home
+    background-image: url(img/space-640px.png)
+    z-index: 1
+
+.hamburger__icon 
+    position: fixed
+    right: 15px
+    top: 15px
+    display: none
+    color: $iconsColor
+    font-size: $iconsSize
+    cursor: pointer
+
+.hamburger__icon--on
+    display: block
+
+.navigation__arrow
+   position: fixed
+   bottom: 20px
+   right: 20px
+   font-size: 50px
+   width: 50px
+   height: 50px
+   border-radius: 50%
+   background-color:  rgba(0, 0, 0, .6)
+   box-shadow: 5px 15px 23px -11px rgba(222, 218, 218, 1)
+   color: white
+   overflow: hidden
+   transition: .2s
+   cursor: pointer
+
+.navigation__arrow-off
+    display: none
+
+.navigation__arrow:hover
+    box-shadow: 0 0 13px 0 #ebe6e6
+
+.arrow__icon
+    position: absolute
+    bottom: -70px
+    left: 50%
+    text-shadow: 0 -20px 0 white, 0 -40px 0 white
+    font-size: 30px
+    transform: translateY(70px)
+    animation: arrow 2s linear infinite
+
+
+// animation for arrow
+
+@keyframes arrow 
+    0%
+        transform: translate(-50%,0)
+    100% 
+        transform: translate(-50%, -130px)
+
+// 
+
+.navigation__list
+    position: fixed
+    left: 0
+    top: 0
+    bottom: 0
+    background-color: rgba(0,0,0,0.6)
+    text-align: left
+    color: $textWhite
+    transition: .5s
+
+.navigation__item
+    list-style-type: none
+    text-transform: uppercase
+    font-size: 20px
+    padding: 5px 10px
+    transition: .5s
+    text-shadow: -2px -1px 2px rgba(0, 0, 0, 1)
+    cursor: pointer
+
+.navigation__list--off
+    left: -250px
+    transition: .5s
+
+.introduction__name
+    margin: 30px 0 10px 0
+    text-align: $textCenter
+    font-family: 'Dancing Script', cursive
+    font-size: 13vw
+
+.description-bg
+    background-color: rgba(255,255,255,0.7)
+    padding: 20px
+
+.description-bg__bold
+    font-weight: 700
+
+.description-bg__text
+    @include alignWithLetterSpacing()
+    padding: 10px 0
+    
+.button
+    text-align: $textCenter
+
+.button__contact
+    position: relative
+    width: 70%
+    max-width: 300px
+    background-color: transparent
+    border: 2px solid $iconsColor
+    border-radius: 15px
+    margin: 30px auto
+    padding: 1rem 2rem
+    color: #3d3b3a
+    font-size: 1.15rem
+    cursor: pointer
+
+.button__contact::before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    left: -.6rem
+    top: -.5rem
+    z-index: -1
+    background-color: #F7567C
+    border-radius: 8px
+    transition: all 200ms ease-out
+
+.button__contact:focus
+    outline: none
+
+.button__contact:hover::before 
+    top: 0
+    left: 0
+
+.button__contact:active 
+    transform: translateY(3px)
+
+// animation for button
+
+@keyframes flick 
+    0% 
+        transform: translate(0, 0) rotate(0deg) scale(1)
+    67% 
+        transform: translate(.4rem, -1.8rem) rotate(160deg) scale(.4)
+    100% 
+        transform: translate(0, 0) rotate(0deg) scale(1)
+
+
+@keyframes twist 
+    0% 
+        transform: rotate(0deg)
+    30% 
+        transform: rotate(60deg)
+    60% 
+        transform: rotate(-20deg)
+    100% 
+        transform: rotate(0deg)
+
+
+@keyframes spin 
+    from 
+        transform: rotate(0deg)
+    to 
+        transform: rotate(360deg)
+
+// MAIN STYLING - ARTICLE ABOUT
+
+.about__header
+    @include articleHeaders()
+
+.description
+    padding: 0 30px
+
+.description__text 
+    text-align: $textCenter
+    margin-bottom: 20px
+
+.frame 
+    position: relative
+    width: 100vw
+    height: 100vw
+
+.frame__image
+    position: absolute
+    @include alignByPosition()
+    width: 100%
+    height: auto
+    z-index: -1
+    overflow: hidden
+
+.image
+    position: relative
+    @include alignByPosition()
+    width: 100%
+    height: 100%
+
+.image__me
+    position: absolute
+    left: 54.8%
+    top: 56.2%
+    transform: translate(-50%,-50%)
+    width: 43%
+    height: auto
+    border-radius: 50%
+
+// MAIN STYLING - ARTICLE EXPERIENCE
+
+.experience
+    padding: 30px
+    background-color: #f9f1f1
+    
+.experience__header
+    @include articleHeaders()
+
+.job__item
+    line-height: 30px
+    list-style-type: none
+
+.job__icon
+    margin-right: 10px
+    color: $iconsColor
+
+.social-media__icons
+    text-align: $textCenter
+
+.more-information
+    margin-top: 20px
+
+.more-information__text
+    @include alignWithLetterSpacing()
+    margin: 20px
+
+.social-media__icon
+    font-size: $iconsSize
+    color: $iconsColor
+    transition: .5s
+    cursor: pointer
+
+.social-media__icon--linkedin:hover
+    color: rgb(66,103,178)
+
+.social-media__icon--github:hover
+    color: rgb(0,0,0)
+
+// MAIN STYLING - ARTICLE SKILLS
+
+.skills__header
+    @include articleHeaders()
+
+.technology
+    padding: 0 30px
+
+.technology__circle
+    position: relative
+    width: 60vw
+    height: 60vw
+    max-width: 160px
+    max-height: 160px
+    margin: 20px auto
+    background-color: #ebe6e6
+    border-radius: 50%
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(183,183,183,0)
+    transition: .5s
+
+.technology__circle--off
+    left: -3000px
+
+.technology__circle:hover
+    background: linear-gradient(0deg, rgba(242,250,141,0.7540998542274052) 0%, rgba(241,159,209,1) 100%)
+    transform: scale(1.03)
+
+.technology__image
+    position: absolute
+    @include alignXByPosition()
+    bottom: 20%
+    max-width: 50%
+
+.technology__name
+    position: absolute
+    @include alignXByPosition()
+    top: 12%
+    font-size: 5.6vw
+    text-transform: uppercase
+
+.projects__in-progress
+    @include alignWithLetterSpacing()
+    margin: 30px auto
+    height: 20px
+
+.projects__header
+    @include articleHeaders()
+
+.project
+    padding: 0 30px
+
+.project__container
+    position: relative
+    width: 70vw
+    max-width: 200px
+    margin: 10px auto
+    text-align: $textCenter
+    transition: .5s
+    cursor: pointer
+
+.project__container:active
+    transform: scale(1.05)
+    filter: opacity(60%)
+    
+.project__name
+    position: absolute
+    @include alignByPosition()
+    text-transform: uppercase
+    line-height: 40px
+    color: rgb(0,0,0)
+
+.project__image
+    width: 100%
+    height: auto
+    filter: opacity(35%)
+
+// FOOTER STYLING
+
+.footer
+    background: linear-gradient(0deg, rgba(241,188,220,1) 0%, rgba(255,255,255,1) 100%)
+
+.footer__header
+    @include articleHeaders()
+
+.contact
+    text-align: $textCenter
+    margin-bottom: 20px
+
+.mail__icon, .phone__icon, .facebook__icon
+    color: $iconsColor
+    font-size: $iconsSize
+    padding-bottom: 15px
+    transition: .5s
+    cursor: pointer
+
+.mail__icon:hover, .phone__icon:hover
+    color: rgb(0,0,0)
+
+.facebook__icon:hover
+    color: rgb(66,103,178)   
+
+.phone__text, .mail__text, .mail__text
+    font-size: 14px
+    word-break: break-all
+    
+.footer__sources
+    text-align: $textCenter
+    font-size: 10px
+    color: #e43bb9
+
+.footer__source
+    text-decoration: none
+    color: #e43bb9
+
+// MEDIA QUERIES FOR COMPONENTS
+
+@media screen and (min-width: $smallerthan320px)
+    .technology__name
+        font-size: 19px
+
+@media screen and (min-width: $phone)
+    .hamburger__icon 
+        display: none
+
+    .navigation__list--off
+        left: 0
+
+    .navigation__list
+        position: static
+        width: 100%
+        background-color: transparent
+        color: rgb(0,0,0)
+
+    .navigation__bg
+        background-color: rgba(255,255,255,0.7)
+        width: 100%
+
+    .navigation__item
+        font-size: 2vw
+        padding: 20px 10px
+        position: relative
+        text-shadow: none
+    
+    .navigation__item::after
+        position: absolute
+        top: 80%
+        left: 0
+        width: 100%
+        height: 4px
+        background: rgba(0,0,0,0.3)
+        content: ''
+        opacity: 0
+        transition: opacity 0.3s, transform 0.3s
+        transform: translateY(10px)
+
+    .navigation__item:hover::after,
+    .navigation__item:focus::after 
+        opacity: 1
+        transform: translateY(0px)
+
+    .introduction__name
+        font-size: 84px
+
+    .description
+        width: 70%
+    
+    .image__me
+        left: 54.6%
+        top: 54.9%
+        width: 44%
+
+    .frame 
+        height: 450px
+    
+    .about__header
+        margin: 30px 10px 0 10px
+    
+    .more-information__text
+        margin-bottom: 50px
+
+    .more-information
+        margin-left: 20px
+        margin-top: 0
+
+@media screen and (min-width: $tablet)
+    .image__me
+        left: 54.6%
+        top: 55.2%
+
+@media screen and (min-width: $desktop)
+    .image__me
+        left: 54.6%
+        top: 55.7%
+
+    .navigation__item
+        font-size: 19px
+    
+@media screen and (min-width: $biggerthan1800px)
+    .navigation__arrow
+        left: 60%

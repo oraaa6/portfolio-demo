@@ -1,0 +1,61 @@
+// APPLING FONTS
+html
+    font-family: open-sans, arial, sans-serif
+
+// RESET
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+// VARIABLES OF ICONS:
+
+$iconsSize: 35px
+$iconsColor: #68696e
+
+// VARIABLES OF TEXTS
+
+$textWhite: white
+$textCenter: center
+
+// BREAKPOINTS VARIABLES
+
+$smallerthan320px: 320px
+$phone: 640px
+$tablet: 768px
+$desktop: 1024px
+$biggerthan1800px: 1800px
+
+// MIXINS ALIGN
+
+@mixin alignByPosition()
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%) 
+
+@mixin alignXByPosition()
+    left: 50%
+    transform: translate(-50%) 
+
+// MIXINS LAYOUT
+
+@mixin flexColumn 
+    display: flex
+    flex-direction: column
+
+@mixin flexRow()
+    display: flex
+    flex-direction: row
+
+// MIXINS TEXTS
+
+@mixin articleHeaders()
+    text-align: center
+    text-transform: uppercase
+    margin: 30px 10px
+    word-break: break-all
+    text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0,0,0,0.15)
+
+@mixin alignWithLetterSpacing()
+    text-align: center
+    letter-spacing: 2px

@@ -1,0 +1,44 @@
+// LAYOUTS SETTINGS
+.page
+    width: 100%
+    height: 100%
+    overflow-x: hidden
+
+.about, .skills, .projects, .navigation__list, .introduction .description-bg__text, .container, .contact, .footer__sources, .navigation__arrow 
+    max-width: 1280px
+    margin: 0 auto
+
+.page, .home, .introduction, .container
+    @include flexColumn()
+
+.container
+    align-items: center
+
+.social-media
+    @include flexRow()
+    justify-content: space-around
+
+.technology, .project, .contact
+    display: grid
+    justify-content: center
+    gap: 20px
+
+.technology
+    grid-template-columns: repeat(auto-fit, minmax(170px, 5fr))
+
+.project
+    grid-template-columns: repeat(auto-fit, minmax(200px, 5fr))
+
+.contact
+    grid-template-columns: repeat(auto-fit, minmax(200px, 3fr))  
+
+// MEDIA QUERIES FOR LAYOUTS
+
+@media screen and (min-width: $phone)
+    .container, .navigation__list
+        @include flexRow()
+        justify-content: space-around
+
+@media screen and (min-width: $tablet)
+    .frame
+        flex-basis: 580px

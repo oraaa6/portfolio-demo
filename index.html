@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aleksandra Kida">
+    <meta name="keywords" content="frontend developer, create website, javascript, html, css">
+    <title>Hello, i'm Ola!</title>
+    <script src="https://kit.fontawesome.com/9946bf0bff.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page page--blur-off">
+    <header class="home page__header scroll">
+        <nav class="navigation home__navigation">
+            <div class="hamburger navigation__hamburger navigation__hamburger--on">
+                <i class="fas hamburger__icon hamburger__icon--on fa-bars"></i>
+                <i class="fas hamburger__icon fa-times"></i> 
+            </div>
+            <div class="arrow navigation__arrow navigation__arrow-off">
+                <i class="fas arrow__icon fa-chevron-up"></i>
+            </div>
+                <div class="navigation__bg">
+                    <ul class="navigation__list navigation__list--off">
+                        <li class="navigation__item" data-number="0">Home</li>
+                        <li class="navigation__item" data-number="1">About</li>
+                        <li class="navigation__item" data-number="2">Experience</li>
+                        <li class="navigation__item" data-number="3">Skills</li>
+                        <li class="navigation__item" data-number="4">My Projects</li>
+                        <li class="navigation__item" data-number="5">Contact</li>
+                    </ul>
+                </div>
+        </nav>
+        <div class="introduction home__introduction">
+            <h1 class="introduction__name">Hello, I'm Ola!</h1>
+            <div class="description-bg introduction__bg"><p class="description-bg__text">I am a novice <span class="description-bg__bold">Frontend Developer. </span>Welcome to my small World!</hello></p></div>
+            <div class="button introduction__button">
+            <button class="button__contact">Contact Me</button>
+            </div>
+        </div>
+    </header>
+    <main class="main page__main">
+        <article class="about main__about scroll">
+            <h2 class="about__header">who i am</h2>
+            <div class="container about__container">
+                <section class="description container__about">
+                    <p class="description__text">I am a highly-motivated, patient person who wants to write my own fairytale. I am currently working as a Designer's Assistant which is a completely different story. I tried coding out of curiosity and it has become my hobby. Working as a Frontend Developer could let me spread my wings. 
+                    </p>
+                </section>
+                    <div class="frame circles__images">
+                        <img class="frame__image" src="img/—Pngtree—watercolor circle frame decoration_6357991.png" alt="">
+                        <div class="image frame__photo">
+                            <img src="img/me.png" alt="" class="image__me">
+                        </div>
+                    </div>
+            </div>
+        </article>
+        <article class="experience main__experience scroll">
+            <h2 class="experience__header">where i worked</h2>
+            <div class="container experience__container">
+                <section class="job container__job">
+                    <ul class="job__list">
+                        <li class="job__item"><i class="fas job__icon fa-rocket"></i> Assistant Designer, Offer Specialist in field of sanitary installations</li>
+                        <li class="job__item"><i class="fas job__icon fa-rocket"></i> Office Worker</li>
+                        <li class="job__item"><i class="fas job__icon fa-rocket"></i> Lab Technician</li>
+                    </ul>
+                </section>
+                <section class="more-information container__more-information">
+                    <p class="more-information__text">If you want to know more, visit:</p>
+                    <div class="social-media more-information__social-media">
+                        <div class="social-media__icons"><a href="https://www.linkedin.com/in/aleksandra-kida/" class="social-media__link" target="_blank"><i class="fab social-media__icon social-media__icon--linkedin fa-linkedin-in"></i></a></div>
+                        <div class="social-media__icons"><a href="https://github.com/oraaa6" class="social-media__link" target="_blank"><i class="fab social-media__icon social-media__icon--github fa-github"></i></a></div>
+                    </div>
+                </section>
+            </div> 
+        </article>
+        <article class="skills main__skills scroll">
+            <h2 class="skills__header">technologies i use</h2>
+            <section class="technology skills__list">
+                <div class="technology__circle technology__circle--off"><img src="img/html-64px.png" alt="html5" class="technology__image"><p class="technology__name">html</p></div>
+                <div class="technology__circle technology__circle--off"><img src="img/css-64px.png" alt="css" class="technology__image"><p class="technology__name">css</p></div>
+                <div class="technology__circle technology__circle--off"><img src="img/js-64px.png" alt="javascript" class="technology__image"><p class="technology__name">js</p></div>
+                <div class="technology__circle technology__circle--off"><img src="img/sass-64px.png" alt="sass" class="technology__image"><p class="technology__name">sass</p></div>
+                <div class="technology__circle technology__circle--off"><img src="img/responsive-64px.png" alt="responsive-design" class="technology__image"><p class="technology__name">rwd</p></div>
+            </section>
+        </article>
+        <article class="projects main__projects scroll">
+            <h2 class="projects__header">what i have done </h2>
+            <div class="project projects__list">
+                <div class="project__container">
+                    <img src="img/project-1.png" alt="" class="project__image">
+                    <p class="project__name">Example project 1</p>
+                </div>
+                <div class="project__container">
+                    <img src="img/project-2.png" alt="" class="project__image">
+                    <p class="project__name">Example project 2</p>
+                </div>
+                <div class="project__container">
+                    <img src="img/project-3.png" alt="" class="project__image">
+                    <p class="project__name">Example project 3</p>
+                </div>
+            </div>
+            <p class="projects__in-progress"></p>
+        </article>
+    </main>
+    <footer class='footer page__footer scroll'>
+        <h2 class="footer__header"> contact me</h2>
+        <div class= 'contact footer__contact'>
+            <div class="phone contact__phone">
+                <a href="tel:+48796054964" class="phone__link"><i class="fas phone__icon fa-phone"></i></a>
+                <p class="phone__text">+48 796-054-964</p>
+            </div>
+            <div class="mail contact__mail">
+                <a href="mailto:aleksandra_kida@wp.pl" class="mail__link"><i class="fas mail__icon fa-envelope"></i></a>
+                <p class="mail__text">aleksandra_kida@wp.pl</p>
+            </div>
+            <div class="facebook contact_facebook">
+                <a href="https://www.facebook.com/aleksandra.drazek.5" class="facebook__link" target="_blank"><i class="fab facebook__icon fa-facebook-f"></i></a>
+                <p class="mail__text">facebook</p> 
+            </div>
+        </div>
+        <div class="footer__sources">Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons" class="footer__source">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon" class="footer__source">www.flaticon.com</a></div>
+        <div class="footer__sources">circle PNG Designed By Reiko from https://pngtree.com/freepng/watercolor-circle-frame-decoration_6357991.html?sol=downref&id=bef</div>
+    </footer>
+<script src="main.js"></script>    
+</body>
+</html>
